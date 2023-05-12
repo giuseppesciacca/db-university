@@ -1,6 +1,6 @@
 SHOW databases;
 
-USE 91_university;
+USE university;
 
 SHOW tables;
 
