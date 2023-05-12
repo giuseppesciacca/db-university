@@ -41,3 +41,9 @@ WHERE `level` = 'magistrale';
 
 SELECT COUNT(*) AS 'count_departments'
 FROM `departments`;
+
+8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
+SELECT *
+FROM `teachers`
+WHERE `phone`!= 'NULL';
