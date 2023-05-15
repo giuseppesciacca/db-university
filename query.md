@@ -14,7 +14,7 @@ FROM `students`
 
 WHERE `date_of_birth` 
 
-LIKE '1990-%';
+LIKE '1990-%'; <!-- oppure WHERE ('date_of_birth') = 1990; -->
 
 2. Selezionare tutti i corsi che valgono più di 10 crediti (479)
 
@@ -34,7 +34,7 @@ SELECT *
 
 FROM `students`
 
-WHERE TIMESTAMPDIFF(YEAR, `students.date_of_birth`, CURDATE()) > 30
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
@@ -58,7 +58,7 @@ FROM `exams`
 
 WHERE `date` = '2020-06-20'
 
-  AND `hour`> '14:00:00';
+  AND `hour`> '14:00:00'; <!-- oppure AND HOUR(`hour`)>= 14 -->
 
 6. Selezionare tutti i corsi di laurea magistrale (38)
 
