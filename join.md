@@ -1,4 +1,14 @@
-1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia - (68)
+
+SELECT `s`.*,
+
+       `d`.`name` AS `degree_name`
+
+FROM `students` `s`
+
+INNER JOIN `degrees` `d` ON `s`.`degree_id` = `d`.`id`
+
+WHERE `d`.`name` = 'Corso di Laurea in Economia';
 
 2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
 
